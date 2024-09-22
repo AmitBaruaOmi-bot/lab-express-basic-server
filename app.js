@@ -31,10 +31,6 @@ app.get("/api/articles", (req, res)=> {
     res.json(articles);
 })
 
-app.use((req, res, next) => {
-    res.status(404).sendFile(__dirname + "/views/not-found.html");
-})
-
 
 app.listen(5005, ()=> {
     console.log("Tell me, I'm all ears!")
